@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>Pizza</title>
+	<style>
+		body,
+		html {
+			background-color: #333;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- https://egzamin-e14.blogspot.com/2018/10/arkusz-e14-06-1806.html -->
+	<h3>Oblicz koszt dostawy</h3>
+	<input type="checkbox" id="zg"> Jestem z Zielonej Góry<br>
+	<p>albo</p>
+	Podaj liczbę kilometrów od Zielonej Góry: <input type="number" id="km" value="0" min="0"><br>
+	<button id="oblicz">Oblicz</button>
+	<p id="wynik"></p>
+	<script>
+		document.getElementById("oblicz").addEventListener("click", () => {
+			let zg = document.getElementById("zg").checked
+			if (zg) {
+				document.getElementById("wynik").innerHTML = 'Dowieziemy Twoją pizzę za darmo'
+			}
+			else {
+				let koszt = document.getElementById("km").value * 2;
+				document.getElementById("wynik").innerHTML = `Dowóz będzie Cię kosztował ${koszt} złotych`
+			}
+		})
+	</script>
+</body>
+
+</html>

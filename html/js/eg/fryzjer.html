@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Salon fryzjerski</title>
+  <style>
+    body,
+    html {
+      background-color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- https://egzamin-ee09.blogspot.com/2020/09/arkusz-ee09-05-2006-sg.html -->
+  <h3>Dziś promocja na strzyżenie włosów</h3>
+  <input type="radio" name="option" value="25"> Krótkie<br>
+  <input type="radio" name="option" value="30"> Średnie<br>
+  <input type="radio" name="option" value="40"> Półdługie<br>
+  <input type="radio" name="option" value="50"> Długie<br>
+  <input type="button" value="Odkryj promocję" id="calc">
+  <p id="result"></p>
+  <script>
+    document.getElementById("calc").addEventListener("click", () => {
+      let options = document.getElementsByName("option");
+      let option = document.getElementsByName("option")[0];
+      options.forEach(ele => {
+        if(ele.checked) option = ele;
+      });
+      document.getElementById("result").innerHTML = `Cena strzyżenia: ${option.value}`
+    })
+  </script>
+</body>
+
+</html>

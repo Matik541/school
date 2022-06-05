@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+}  
+body {
+  background-color: rgb(172, 216, 90);
+  font-family: sans-serif;
+  width: 1200px;
+  margin: 0 auto;
+}
+div{
+  background-color:magenta;
+  float: left;
+  padding: 5px;
+}
+p{
+  text-indent: 2ch;
+}
+#header, #footer {
+  width: 1200px;
+}
+#header{
+  background-color:deeppink;
+}
+#left{
+  background-color: pink;
+  width: 20%;
+}
+#main{
+  width: 80%;
+}
+#footer{
+  background-color: lightyellow;
+}
+#lista1{
+  list-style-type: hiragana;
+}
+#in1{
+  list-style-image: url(https://picsum.photos/20);
+  text-align: center;
+}
+#lista2{
+  list-style-position: inside;
+}

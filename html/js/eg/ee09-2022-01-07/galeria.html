@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria</title>
+</head>
+
+<body>
+  <img id="display" width="500" src="./lanzarotte.jpg" alt="Galeria">
+  <hr>
+  <h3>Przeglądaj</h3>
+  <img class="zdj" width="200" src="./lanzarotte.jpg" alt="lanzarotte">
+  <img class="zdj" width="200" src="./pekin.jpg" alt="pekin">
+  <img class="zdj" width="200" src="./serengeti.jpg" alt="seregeti">
+  <img class="zdj" width="200" src="./wenecja.jpg" alt="wenecja">
+  <img class="zdj" width="200" src="./tajlandia.jpg" alt="tajlandia">
+  <p>
+    Polub nas <img id="like" src="./icon-off.png">
+  </p>
+  <script>
+    let display = document.getElementById("display");
+    let zdj = document.querySelectorAll(".zdj")
+    zdj.forEach(ele => {
+      ele.addEventListener("click", function(){
+        display.src = this.src;
+      })
+    });
+    document.getElementById("like").addEventListener("click", function(){
+      this.src = "./icon-"+((this.src.includes('off'))?"on":"off")+".png"
+    })
+  </script>
+</body>
+
+</html>

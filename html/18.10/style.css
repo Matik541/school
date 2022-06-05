@@ -1,0 +1,43 @@
+* {
+  box-sizing:border-box;
+}
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  width: 1200px;
+}
+header, nav, section, aside, footer {
+  padding: 5px;
+  background-color: #434347
+}
+
+header, nav, footer {
+  width: 100%;
+}
+section {
+  float: left;
+  width: 60%;
+  height: 400px;
+  overflow: auto;
+}
+aside{
+  float: right;
+  width: 40%;
+}
+footer {
+  clear: both;
+}
+h1{
+  text-align: center;
+  color: #00ffff;
+}
+article{
+  width: 50%;
+  padding: 5px;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}

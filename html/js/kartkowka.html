@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kartkówka - JS</title>
+  <style>
+    button{
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  Jakie kolory dodać?<br>
+  <input type="checkbox" value="red" class="mix">Czerwony<br>
+  <input type="checkbox" value="green" class="mix">Zielony<br>
+  <input type="checkbox" value="blue" class="mix">Niebieski<br>
+  <input type="button" id="btn" value="Wykonaj">
+  <hr>
+  <button style="background-color: red" class="color">red</button>
+  <button style="background-color: orange" class="color">orange</button>
+  <button style="background-color: yellow" class="color">yellow</button>
+  <button style="background-color: green" class="color">green</button>
+  <button style="background-color: blue" class="color">blue</button>
+  <button style="background-color: darkorchid" class="color">darkorchid</button>
+  <p id="text">Tekst w JS</p>
+  <script>
+    document.getElementById("btn").addEventListener("click", function () {
+      let mix = document.getElementsByClassName("mix");
+      this.style.backgroundColor = `rgb(${(mix[0].checked)?255:0}, ${(mix[1].checked)?255:0}, ${(mix[2].checked)?255:0})`
+    })
+    let colors = document.getElementsByClassName("color");
+    for(const color of colors){
+      color.addEventListener("click", function(){
+        document.getElementById("text").style.color = this.style.backgroundColor;
+      })
+    }
+  </script>
+</body>
+
+</html>

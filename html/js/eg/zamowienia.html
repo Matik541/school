@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>zamówienia</title>
+  <style>
+    body,
+    html {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- https://egzamin-e14.blogspot.com/2020/02/arkusz-e14-03-2001-sg.html -->
+  <h1>Strefa zamówień</h1>
+  Numer kształtu: <br>
+  <input type="number" id="shape"><br>
+  skomponuj swój kolor, podaj RGB:<br>
+  R: <input type="number" id="r"> G: <input type="number" id="g"> B:<input type="number" id="b"><br>
+  <button id="order">Zamówienie</button>
+  <p id="yourOrder">Twoje zamówienie</p>
+  <button id="color">Kolor</button>
+  <script>
+    document.getElementById("order").addEventListener("click", () => {
+      let result;
+      switch (document.getElementById("shape").value) {
+        case '1':
+          result = 'cytryna';
+          break;
+        case '2':
+          result = 'liść';
+          break;
+        case '3':
+          result = 'banan';
+          break;
+        default:
+          result = 'inny'
+          break;
+      }
+      document.getElementById("yourOrder").innerHTML = `Twoje zamówienie to cukierek ${result}`
+      color = [document.getElementById("r").value, document.getElementById("g").value, document.getElementById("b").value]
+      console.log(color);
+      document.getElementById("color").style.backgroundColor = `rgb(${color.join(',')})`
+    })
+  </script>
+</body>
+
+</html>

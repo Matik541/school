@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>pogotowie komputerowe</title>
+	<style>
+		body,
+		html {
+			background-color: #333;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- https://egzamin-e14.blogspot.com/2019/10/arkusz-e14-06-1906.html -->
+	<h3>Formularz kontaktowy</h3>
+	<form id="form">
+		<table>
+			<tr>
+				<td>Imię: </td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Nazwisko: </td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>E-mail: </td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Usługa: </td>
+				<td>
+					<select>
+						<option value="naprawa komputera">naprawa komputera</option>
+						<option value="odzyskiwanie danych">odzyskiwanie danych</option>
+						<option value="problemy z oprogramowaniem">problemy z oprogramowaniem</option>
+						<option value="konfiguracja sieci LAN">konfiguracja sieci LAN</option>
+						<option value="inne">inne</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="checkbox" id="sendCopy">Wyślij kopię wiadomości</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="reset" value="Resetuj"><input type="button" value="Prześlij" id="send">
+				</td>
+			</tr>
+		</table>
+	</form>
+	<p id="result"></p>
+	<script>
+		document.getElementById("send").addEventListener("click", () => {
+			form = document.getElementById("form");
+			document.getElementById("result").innerHTML = `${form[0].value} ${form[1].value}<br>${form[2].value.toLowerCase()}<br>Usługa: ${form[3].value}`
+		})
+	</script>
+</body>
+
+</html>

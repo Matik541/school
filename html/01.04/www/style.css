@@ -1,0 +1,96 @@
+:root{
+  --header-color: #3b3030;
+  --header-bg-color: #d45151;
+  --left-color: #084711;
+  --left-bg-color: #52ee76;
+  --right-color: #c51fe2;
+  --right-bg-color: #154053;
+  --menu-color: #abc027;
+  --menu-bg-color: #321033;
+  --footer-color: #786969;
+  --footer-bg-color: #5a3232;
+  
+  --p-color: #dcbe13;
+  --a-color: #1363dc;
+  --a-hover-color: #bdcade;
+}
+
+*{
+  box-sizing: border-box;
+  transition: all 0.1s;
+}
+
+p::first-letter{
+  font-size: 125%;
+  color: var(--p-color)
+}
+p::after{
+  content: "koniec.";
+  color: var(--p-color)
+}
+
+header{
+  text-align: center;
+  color: var(--header-color);
+  background-color: var(--header-bg-color);
+  padding: 1px;
+}
+
+footer{
+  color: var(--footer-color);
+  background-color: var(--footer-bg-color);
+  padding: 1px;
+}
+
+a{
+  text-decoration: none;
+  color: var(--a-color);
+  padding: 20px;
+}
+a:hover{
+  color: var(--a-hover-color);
+  background-color: var(--a-color);
+}
+
+#img1{
+  background-image: url(./usmiech_r.png);
+  width: 100px;
+  height: 100px;
+}
+#img1:hover{
+  background-image: url(./usmiech_z.png)
+}
+
+.menu{
+  color: var(--menu-color);
+  background-color: var(--menu-bg-color);
+}
+
+.left, .right{
+  height: 500px;
+  padding: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.left{
+  color: var(--left-color);
+  background-color: var(--left-bg-color);
+  width: 25%;
+  float: left;
+}
+.right{
+  color: var(--a-hover-color);
+  background-color: var(--a-color);
+  width: 75%;
+  float: right;
+}
+
+.img-list{
+  list-style-image: url(./usmiech_maly.png);
+}
+
+.right-list{
+  list-style-type: circle;
+  text-align: right;
+  list-style: inside;
+}

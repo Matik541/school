@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>tutuł</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  Tabele 
+  <!-- <table border="0" width="100" height="100"> NIE -->
+  <!-- <table cellspacing="5" cellpadding="10"> - ok, ale w CSS jest border-spacing i border-padding -->
+  <table>
+    <caption>Tabelka</caption>
+    <tr>
+      <th></th>
+      <th>Col1</th>
+      <th>Col2</th>
+      <th>Col3</th>
+      <th>Col4</th>
+    </tr>
+    <tr>
+      <th>Row1</th>
+      <td colspan="3">1.1</td>
+      <td rowspan="4">1.2</td>
+    </tr>
+    <tr>
+      <th>Row2</th>
+      <td>2.1</td>
+      <td>2.2</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>Row3</th>
+      <td>3.1</td>
+      <td colspan="2" rowspan="2">3.2</td>
+    </tr>
+    <tr>
+      <th>Row4</th>
+      <td>4.1</td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body, html {
+  background-color: #333;
+  color: #fff;
+}
+td, th{
+  min-width: 15ch;
+  height: 2em;
+}
+table, th, td {
+  border: 3px solid #000;
+  border-collapse: collapse;
+}
+table{
+  float: right;
+}
+th{
+  background-color: rgb(235, 172, 91)
+}
+td[rowspan="2"]{
+  background-color: rgb(225, 247, 34);
+}
+td[rowspan="3"]{
+  background-color: rgb(196, 42, 162);
+}

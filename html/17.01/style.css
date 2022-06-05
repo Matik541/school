@@ -1,0 +1,20 @@
+body, html {
+  background-color: #333;
+  color: #fff;
+}
+
+table, th, td {
+  border: 1px solid #999;
+  border-radius: 10px;
+  border-spacing: 15px;
+  padding: 15px; 
+}
+table tr *:nth-child(even){
+  background-color: #00f
+}
+table tr:nth-child(even){
+  background-color: #0f0
+}
+table tr:nth-child(even) *:nth-child(even){
+  background-color: #f00
+}

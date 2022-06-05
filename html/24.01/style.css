@@ -1,0 +1,73 @@
+body{
+  background-color: gray;
+  margin: 0 auto;
+  width: 1200px;
+  font-size: 21px;
+  font-family: sans-serif;
+}
+h1, h2{
+  color: yellow;
+  text-shadow: 2px 5px 5px black;
+}
+#gora{
+  background-color: pink;
+  padding: 15px;
+  text-align: center;
+}
+#srodek{
+  height: 700px;
+  background-color: magenta;
+}
+#lewa{
+  background-color: aqua;
+  width: 400px;
+  height: 700px;
+  float: left;
+}
+#prawa{
+  background-color: white;
+  width: 800px;
+  height: 700px;
+  float: left;
+}
+#stopka{
+  background-color: pink;
+  clear: both;
+  height: 50px;
+}
+#zdj{
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  border-radius: 0 60% 0 60%;
+  border-style: groove;
+  border-color: rgb(24, 248, 24);
+  border-width: 3px;
+  padding: 5px
+}
+.txt{
+  padding: 50px 10px 10px 10px;
+}
+#menu{
+  background-color: magenta;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#menu li {
+  border: 2px solid black;
+  width: 100%;
+  padding: 10px;
+  margin: 2px;
+  text-align: center;
+}
+#menu li:hover {
+  background-color: black;
+}
+#menu li a {
+  text-decoration: none;
+  color: white;
+}

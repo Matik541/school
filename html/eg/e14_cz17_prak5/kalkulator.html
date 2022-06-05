@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="usługi, remontowe" />
+	<meta name="description" content="usługi remontowe" />
+	<title>Wyremontuj mieszkanie</title>
+	<link rel="stylesheet" href="remont.css" />
+</head>
+
+<body>
+	<div class="header">
+		<img src="logo.png" alt="logo" height="100" />
+	</div>
+	<div>
+		<div class="menu"><a href="index.html">O NAS</a></div>
+		<div class="menu"><a href="kontakt.html">KONTAKT</a></div>
+		<div class="menu"><a href="kalkulator.html">KALKULATOR</a></div>
+		<div class="menu">
+			<a href="http://www.jakremontowac.pl/">POLECANE STRONY</a>
+		</div>
+	</div>
+	<div class="main">
+		<h1>Malowanie pokoju: 8 zł za m<sup>2</sup></h1>
+		<p>
+			Wymiary pokoju w metrach:
+			<input type="number" id="wall1" />
+			<input type="number" id="wall2" />
+		</p>
+		<button id="btn">OBLICZ KOSZT</button><br />
+		<p id="total"></p>
+	</div>
+	<div class="footer">
+		<p>Autor Strony: Jebać PESEL</p>
+	</div>
+	<script>
+		const height = 2.7;
+		document.getElementById("btn").onclick = oblicz;
+		function oblicz() {
+			let wall1 = document.getElementById("wall1").value * 1;
+			let wall2 = document.getElementById("wall2").value * 1;
+			let total = parseInt(2 * (wall1 + wall2) * height * 100) / 100;
+			document.getElementById("total").innerHTML = `<p>Powierzchnia całkowita ścian: ${total}m<sup>2</sup></p><p>Koszt malowania: ${(total * 8)}zł</p>`;
+		}
+		
+	</script>
+</body>
+
+</html>

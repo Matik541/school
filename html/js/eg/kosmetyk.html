@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Salon kosmetyczny</title>
+  <style>
+    body,
+    html {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- https://egzamin-ee09.blogspot.com/2020/09/arkusz-ee09-04-2006-sg.html -->
+  <h3>Sprawdź cenę swojej wizyty</h3>
+  <input type="checkbox" name="option" value="45"> Piling<br>
+  <input type="checkbox" name="option" value="30"> Maska<br>
+  <input type="checkbox" name="option" value="20"> Masaż twarzy<br>
+  <input type="checkbox" name="option" value="5"> Regulacja brwi<br>
+  <input type="button" value="Odkryj promocję" id="calc">
+  <p id="result"></p>
+  <script>
+    document.getElementById("calc").addEventListener("click", () => {
+      let options = document.getElementsByName("option");
+      let cost = 0;
+      options.forEach(ele => {
+        if(ele.checked){
+          cost += ele.value*1
+        }
+      });
+      document.getElementById("result").innerHTML = `Cena strzyżenia: ${cost}`
+    })
+  </script>
+</body>
+
+</html>

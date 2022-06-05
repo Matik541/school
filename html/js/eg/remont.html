@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>remont</title>
+  <style>
+    body, html{
+      background-color: #333;
+      color: #fff;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- https://egzamin-e14.blogspot.com/2018/06/arkusz-e14-06-1706.html -->
+  <h1>Adres firmy</h1>
+  <form id="form">
+    <p>powierzchnia w m<sup>2</sup>: <input type="number" id="area"></p>
+    <input type="radio" name="option" value="70"> Płytki 20 x 20 cm<br>
+    <input type="radio" name="option" value="80"> Płytki 25 x 12 cm<br>
+    <input type="button" value="PRZELICZ" id="calc">
+  </form>
+  <p id="result"></p>
+  <script>
+    document.getElementById("calc").addEventListener("click", () => {
+      let area = document.getElementById("area").value;
+      let options = document.getElementsByName("option");
+      let option = document.getElementsByName("option")[0];
+      options.forEach(ele => {
+        if(ele.checked) option = ele;
+      });
+      document.getElementById("result").innerHTML = `Koszt kafelkowania: ${option.value*area}zł`
+    })
+  </script>
+</body>
+</html>

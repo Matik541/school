@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Wesele</title>
+  <style>
+    body,
+    html {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- https://egzamin-e14.blogspot.com/2018/11/arkusz-e14-05-1806.html -->
+  <h2>Ile będzie kosztowało moje wesele?</h2>
+  Podaj liczbę gości: <input type="number" id="guests" min="1"><br>
+  <input type="checkbox" id="after"> Wesele z poprawinami?<br>
+  <button id="calc">Oblicz koszt</button>
+  <p id="result"></p>
+  <script>
+    document.getElementById("calc").addEventListener("click", () => {
+      let guests = document.getElementById("guests").value * 100;
+      let after = (document.getElementById("after").checked) ? (1.3) : (1);
+      document.getElementById("result").innerHTML = `Koszt Twojego wesela to ${guests * after} złotych`;
+    })
+  </script>
+</body>
+
+</html>
